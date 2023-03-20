@@ -1,4 +1,5 @@
 package com.hwan.book.springboot.domain.posts;
+import com.hwan.book.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,7 +13,7 @@ import javax.persistence.Id;
 @Getter // 롬복어노테션 Getter 메소드를 자동 생성
 @NoArgsConstructor // 롬복 어노테이션 (기본 생성자 자동 추가)
 @Entity // 테이블과 링크될 클래스임을 나타냄. 기본값으로 클래스의 카멜케이스 이름을 언더스코어 네이밍으로 테이블 이름 매칭함
-public class Posts { // 실제 DB 테이블과 매칭될 클래스이며, 보통 Entity 클래스 라고함
+public class Posts extends BaseTimeEntity { // 실제 DB 테이블과 매칭될 클래스이며, 보통 Entity 클래스 라고함
     // JPA를 사용하면 DB 데이터에 작업할 경우 실제 쿼리를 날리기보다는, 이 Entity 클래스의
     // 수정을 통해 작업을 함
 
