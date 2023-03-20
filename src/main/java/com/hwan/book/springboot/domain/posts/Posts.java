@@ -41,6 +41,14 @@ public class Posts { // 실제 DB 테이블과 매칭될 클래스이며, 보통
         this.author = author;
     }
 
+    public void update(String title, String content){
+        this.title = title;
+        this.content = content;
+    }
+
+
+
+
 }
 
 // Setter 메소드가 없는데 자바빈 규약을 생각하면ㅅ 게터 세터를 무작정 생성하는 경우가 있음
