@@ -55,6 +55,8 @@ dependencies {
     // 테스트 용도로 많이 사용됨
     // 이 책에서는 JPA의 테스트, 로컬 환경에서의 구동에서 사용할 예정
 
+    implementation('org.springframework.boot:spring-boot-starter-mustache')
+
 }
 
 test {
