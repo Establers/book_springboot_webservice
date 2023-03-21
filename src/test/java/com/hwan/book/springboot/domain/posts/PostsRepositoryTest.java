@@ -25,7 +25,7 @@ public class PostsRepositoryTest {
     public void cleanup(){
         postsRepository.deleteAll();
     }
-
+    // test
     @Test
     public void 게시글저장_불러오기(){
         //given
