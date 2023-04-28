@@ -1,10 +1,14 @@
 package com.hwan.book.springboot.web;
 import com.hwan.book.springboot.service.posts.PostsService;
+import com.hwan.book.springboot.web.dto.PostsListResponseDto;
 import com.hwan.book.springboot.web.dto.PostsResponseDto;
 import com.hwan.book.springboot.web.dto.PostsSaveRequestDto;
 import com.hwan.book.springboot.web.dto.PostsUpdateRequestDto;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
@@ -27,4 +31,14 @@ public class PostsApiController {
         return postsService.findById(id);
     }
 
+    @DeleteMapping("/api/v1/posts/{id}")
+    public Long delete(@PathVariable Long id){
+        postsService.delete(id);
+        return id;
+    }
+
+    @GetMapping("/api/v1/post/list")
+    public List<PostsListResponseDto> findAll(){
+        return postsService.findAllDesc();
+    }
 }

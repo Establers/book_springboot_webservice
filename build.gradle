@@ -27,8 +27,9 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 // io.spring... 은 스프링부트 의존성들을 관리해주는 플러그인이여서 꼭 추가해야함
 
-group 'org.example'
+group 'com.hwan.book'
 version '1.0-SNAPSHOT'
+
 
 repositories {
     mavenCentral()
